@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ViewNoteFragment"
+    android:id="@+id/id_constraint_color_view_note"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/id_btn_back_note"
+        />
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="tittle note"
+        android:textSize="@dimen/_21sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_btn_back_note"
+        app:layout_constraintLeft_toRightOf="@id/id_btn_back_note"
+android:id="@+id/id_tittle_view_note"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/id_btn_back_note" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hallo bro"
+        app:layout_constraintTop_toBottomOf="@id/id_tittle_view_note"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/id_content_view_note"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="14dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditText_NAMETASK"
+        android:textColor="?text_color"
+        android:hint="Nama Catatan"/>
+
+    <EditText
+        android:id="@+id/EditText_URL_AIRDROP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EditText_NAMETASK"
+        android:textColor="?text_color"
+        android:hint="Isi Catatan" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_tv_color_list"
+        android:text="Warna Catatan"
+        android:layout_below="@id/EditText_URL_AIRDROP"
+        android:layout_marginTop="10dp"
+        android:textColor="?text_color"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/layout_adapter_list_color"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/id_tv_color_list"
+        android:id="@+id/id_rec_list_color"
+        />
+
+    </RelativeLayout>
+</ScrollView>

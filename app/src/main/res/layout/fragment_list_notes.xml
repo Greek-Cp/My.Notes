@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ListNotesFragment"
+
+    android:id="@+id/id_scrollview"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Catatan"
+
+        android:textColor="?text_color"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_40sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/id_textview_list_notes"
+        />
+    <TextView
+        android:textColor="?text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_textview_deskripsi_list_notes"
+        app:layout_constraintTop_toBottomOf="@id/id_textview_list_notes"
+        android:text="kumpulan catatan yang kamu tulis"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:fontFamily="@font/hensip"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/layout_adapter_category_note"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/id_rec_list_category_item"
+            app:layout_constraintTop_toBottomOf="@id/id_textview_deskripsi_list_notes"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_rec_list_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/id_rec_list_category_item"
+            tools:listitem="@layout/layout_adapter_list_color"
+
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@id/id_rec_list_color"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/layout_adapter_card"
+        android:id="@+id/id_rec_list_notes"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
